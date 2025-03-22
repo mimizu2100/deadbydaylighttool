@@ -92,10 +92,15 @@ h1 {
     transform: scale(1.1);
 }
 .hook-count {
-    color: yellow; /* 吊り回数の数字を黄色にする */
-    font-weight: bold; /* 文字を太くして見やすくする（オプション） */
-    font-size: 24px; /* 数字を大きくする（オプション） */
+    color: white; /* デフォルトの色（白） */
 }
+
+.hook-count[data-count="0"],
+.hook-count[data-count="1"],
+.hook-count[data-count="2"] {
+    color: yellow; /* 0, 1, 2 のみ黄色 */
+}
+
 .perk-icons {
     display: flex;
     margin-top: 0.5rem;
