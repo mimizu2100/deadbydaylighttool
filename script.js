@@ -135,6 +135,7 @@ window.onload = () => {
     muteButton.style.right = '1rem'; // ★ 右からの位置
     muteButton.style.zIndex = '10'; // ★ 重なり順を最前面に
     muteButton.title = 'ミュート / ミュート解除'; // ★ ツールチップ
+    muteButton.style.color = '#fff'; // ★ 文字色を白に設定
 };
 // イベントリスナー
 startButton.addEventListener('click', startTimer);
