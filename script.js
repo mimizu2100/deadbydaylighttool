@@ -49,7 +49,7 @@ function startTimer() {
         timerInterval = setInterval(updateTimer, 1000);
         isTimerRunning = true;
         startButton.textContent = 'Stop';
-        startButton.disabled = true;
+        startButton.disabled = false;
         if (timerStartSound && !isMuted) { // ★ ミュート状態でなければ再生
             timerStartSound.play(); // タイマー開始音を再生
         } else if (timerStartSound && isMuted) {
@@ -133,9 +133,11 @@ window.onload = () => {
     muteButton.style.position = 'fixed'; // ★ 位置を固定
     muteButton.style.top = '1rem'; // ★ 上からの位置
     muteButton.style.right = '1rem'; // ★ 右からの位置
-    muteButton.style.zIndex = '10'; // ★ 重なり順を最前面に
+    muteButton.style.zIndex = '10000'; // ★ 重なり順を最大にする
     muteButton.title = 'ミュート / ミュート解除'; // ★ ツールチップ
     muteButton.style.color = '#333'; // ★ 文字色を設定
+    // デバッグ用スタイル
+    muteButton.style.boxShadow = '0 0 5px red'; // ★ 赤い影をつける
 };
 // イベントリスナー
 startButton.addEventListener('click', startTimer);
