@@ -271,7 +271,7 @@ h1 {
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
- color: #ffff00;
+    color: #ffff00;
     text-shadow: 0 0 5px #ED1A3D;
 }
 .killer-icon:hover {
@@ -382,6 +382,8 @@ h1 {
     .killer-icon {
         width: 4rem;
         height: 4rem;
+        color: #ffff00;
+        text-shadow: 0 0 5px #ED1A3D;
     }
     .perk-icon {
         width: 2rem;
