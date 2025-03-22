@@ -92,8 +92,8 @@ h1 {
 .killer-icon[data-killer="0"],
 .killer-icon[data-killer="1"],
 .killer-icon[data-killer="2"] {
-    color: yellow;
-    text-shadow: 0 0 5px yellow;
+    color: #ffff00;
+    text-shadow: 0 0 5px #ED1A3D;
 }
 .killer-icon:hover {
     transform: scale(1.1);
