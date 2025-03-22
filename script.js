@@ -92,7 +92,7 @@ perkIcons.forEach((icon, index) => {
 // ポップアップ閉じる処理
 closePopupBtn.addEventListener('click', () => {
     perkDescriptionPopup.style.display = 'none';
-});
+    });
 // リセットボタン
 document.getElementById('reset-all').addEventListener('click', () => {
     resetTimer();
@@ -123,18 +123,18 @@ perkIconsElements.forEach((icon, index) => {
 window.onload = () => {
     timerStartSound = new Audio('決死の一撃 2025-03-22 194215.mp3'); // ★ MP3ファイルのパスを指定 ★
     //timerControls.appendChild(muteButton); // ★ muteButtonをtimerControlsに追加 (timerControlsは定義されていません)
-    document.body.appendChild(muteButton); // ★ muteButtonをbodyに追加
-    muteButton.style.fontSize = '1.2rem'; // ★ アイコンのサイズを調整
-    muteButton.style.cursor = 'pointer'; // ★ カーソルスタイルを設定
-    muteButton.style.padding = '0.5rem'; // ★ パディングを追加
-    muteButton.style.borderRadius = '50%'; // ★ 丸くする
-    muteButton.style.border = 'none'; // ★ 枠線をなくす
-    muteButton.style.backgroundColor = 'transparent'; // ★ 背景色を透明にする
-    muteButton.style.position = 'fixed'; // ★ 位置を固定
-    muteButton.style.top = '1rem'; // ★ 上からの位置
-    muteButton.style.right = '1rem'; // ★ 右からの位置
-    muteButton.style.zIndex = '10'; // ★ 重なり順を最前面に
-    muteButton.title = 'ミュート / ミュート解除'; // ★ ツールチップ
+    document.body.appendChild(muteButton); // ★ muteButtonをbodyに追加
+    muteButton.style.fontSize = '1.2rem'; // ★ アイコンのサイズを調整
+    muteButton.style.cursor = 'pointer'; // ★ カーソルスタイルを設定
+    muteButton.style.padding = '0.5rem'; // ★ パディングを追加
+    muteButton.style.borderRadius = '50%'; // ★ 丸くする
+    muteButton.style.border = 'none'; // ★ 枠線をなくす
+    muteButton.style.backgroundColor = 'transparent'; // ★ 背景色を透明にする
+    muteButton.style.position = 'fixed'; // ★ 位置を固定
+    muteButton.style.top = '1rem'; // ★ 上からの位置
+    muteButton.style.right = '1rem'; // ★ 右からの位置
+    muteButton.style.zIndex = '10'; // ★ 重なり順を最前面に
+    muteButton.title = 'ミュート / ミュート解除'; // ★ ツールチップ
 };
 // イベントリスナー
 startButton.addEventListener('click', startTimer);
