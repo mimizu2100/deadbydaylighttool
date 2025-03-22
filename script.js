@@ -27,7 +27,7 @@ const closePopupBtn = document.getElementById('close-popup');
 let timerStartSound; // ★ Audioオブジェクトの宣言をここで行う
 let isMuted = false; // ★ ミュート状態を管理する変数
 const muteButton = document.createElement('button'); // ★ ミュートボタンを生成
-muteButton.textContent = 'ミュート'; // ★ ボタンのテキストを設定
+muteButton.innerHTML = '&#128266;'; // ★ ボタンのテキストをミュートアイコンに設定
 muteButton.id = 'mute-button'; // ★ ボタンにIDを設定
 // タイマー関数
 function updateTimer() {
@@ -124,6 +124,17 @@ window.onload = () => {
     timerStartSound = new Audio('決死の一撃 2025-03-22 194215.mp3'); // ★ MP3ファイルのパスを指定 ★
     //timerControls.appendChild(muteButton); // ★ muteButtonをtimerControlsに追加 (timerControlsは定義されていません)
     document.body.appendChild(muteButton); // ★ muteButtonをbodyに追加
+    muteButton.style.fontSize = '1.2rem'; // ★ アイコンのサイズを調整
+    muteButton.style.cursor = 'pointer'; // ★ カーソルスタイルを設定
+    muteButton.style.padding = '0.5rem'; // ★ パディングを追加
+    muteButton.style.borderRadius = '50%'; // ★ 丸くする
+    muteButton.style.border = 'none'; // ★ 枠線をなくす
+    muteButton.style.backgroundColor = 'transparent'; // ★ 背景色を透明にする
+    muteButton.style.position = 'fixed'; // ★ 位置を固定
+    muteButton.style.top = '1rem'; // ★ 上からの位置
+    muteButton.style.right = '1rem'; // ★ 右からの位置
+    muteButton.style.zIndex = '10'; // ★ 重なり順を最前面に
+    muteButton.title = 'ミュート / ミュート解除'; // ★ ツールチップ
 };
 // イベントリスナー
 startButton.addEventListener('click', startTimer);
@@ -131,5 +142,5 @@ resetButton.addEventListener('click', resetTimer);
 // ミュートボタンのイベントリスナー ★ 追加 ★
 muteButton.addEventListener('click', () => {
     isMuted = !isMuted; // ミュート状態を反転
-    muteButton.textContent = isMuted ? 'ミュート解除' : 'ミュート'; // ボタンのテキストを更新
+    muteButton.innerHTML = isMuted ? '&#128263;' : '&#128266;'; // ボタンのテキストをミュートアイコンとスピーカーアイコンで切り替え
 });
