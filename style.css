@@ -91,6 +91,11 @@ h1 {
 .killer-icon:hover {
     transform: scale(1.1);
 }
+.hook-count {
+    color: yellow; /* 吊り回数の数字を黄色にする */
+    font-weight: bold; /* 文字を太くして見やすくする（オプション） */
+    font-size: 24px; /* 数字を大きくする（オプション） */
+}
 .perk-icons {
     display: flex;
     margin-top: 0.5rem;
