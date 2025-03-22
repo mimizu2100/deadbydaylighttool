@@ -90,8 +90,8 @@ h1 {
 .killer-icon[data-killer="0"],
 .killer-icon[data-killer="1"],
 .killer-icon[data-killer="2"] {
-    color: #ffff00;
-    text-shadow: 0 0 5px #ED1A3D;
+    color: #ffff00 !important;
+    text-shadow: 0 0 5px #ED1A3D !important;
 }
 .killer-icon:hover {
     transform: scale(1.1);
@@ -281,8 +281,8 @@ h1 {
 .killer-icon[data-killer="0"],
 .killer-icon[data-killer="1"],
 .killer-icon[data-killer="2"] {
-    color: #ffff00;
-    text-shadow: 0 0 5px #ED1A3D;
+    color: #ffff00 !important;
+    text-shadow: 0 0 5px #ED1A3D !important;
 }
 .killer-icon:hover {
     transform: scale(1.1);
