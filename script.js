@@ -25,6 +25,10 @@ const perkDescriptionText = document.getElementById('perk-description-text');
 const closePopupBtn = document.getElementById('close-popup');
 // 効果音関連
 let timerStartSound; // ★ Audioオブジェクトの宣言をここで行う
+let isMuted = false; // ★ ミュート状態を管理する変数
+const muteButton = document.createElement('button'); // ★ ミュートボタンを生成
+muteButton.textContent = 'ミュート'; // ★ ボタンのテキストを設定
+muteButton.id = 'mute-button'; // ★ ボタンにIDを設定
 // タイマー関数
 function updateTimer() {
     seconds++;
@@ -46,10 +50,10 @@ function startTimer() {
         isTimerRunning = true;
         startButton.textContent = 'Stop';
         startButton.disabled = true;
-        if (timerStartSound) { // ★ timerStartSoundが初期化されているか確認
-            timerStartSound.play(); // タイマー開始音を再生
-        } else {
-            console.error("効果音が読み込まれていません。");
+        if (timerStartSound && !isMuted) { // ★ ミュート状態でなければ再生
+            timerStartSound.play(); // タイマー開始音を再生
+        } else if (timerStartSound && isMuted) {
+            console.log("ミュート状態です。効果音は再生しません。");
         }
     }
 }
@@ -117,8 +121,15 @@ perkIconsElements.forEach((icon, index) => {
 });
 // ページ読み込み時にAudioオブジェクトを初期化
 window.onload = () => {
-    timerStartSound = new Audio('決死の一撃 2025-03-22 194215.mp3'); // ★ MP3ファイルのパスを指定 ★
+    timerStartSound = new Audio('決死の一撃 2025-03-22 194215.mp3'); // ★ MP3ファイルのパスを指定 ★
+    //timerControls.appendChild(muteButton); // ★ muteButtonをtimerControlsに追加 (timerControlsは定義されていません)
+    document.body.appendChild(muteButton); // ★ muteButtonをbodyに追加
 };
 // イベントリスナー
 startButton.addEventListener('click', startTimer);
 resetButton.addEventListener('click', resetTimer);
+// ミュートボタンのイベントリスナー ★ 追加 ★
+muteButton.addEventListener('click', () => {
+    isMuted = !isMuted; // ミュート状態を反転
+    muteButton.textContent = isMuted ? 'ミュート解除' : 'ミュート'; // ボタンのテキストを更新
+});
