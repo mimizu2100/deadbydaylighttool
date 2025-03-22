@@ -88,6 +88,13 @@ h1 {
     color: #ffff00;
     text-shadow: 0 0 5px #ED1A3D;
 }
+/* 0, 1, 2 のみ黄色に変更 */
+.killer-icon[data-killer="0"],
+.killer-icon[data-killer="1"],
+.killer-icon[data-killer="2"] {
+    color: yellow;
+    text-shadow: 0 0 5px yellow;
+}
 .killer-icon:hover {
     transform: scale(1.1);
 }
