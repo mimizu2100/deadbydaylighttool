@@ -86,9 +86,11 @@ h1 {
     align-items: center;
     font-size: 1.5rem;
 }
+
 .killer-icon:hover {
     transform: scale(1.1);
 }
+
 /* 0, 1, 2 のみ黄色に変更 */
 .killer-icon[data-killer="0"],
 .killer-icon[data-killer="1"],
@@ -96,6 +98,7 @@ h1 {
     color: #ffff00;
     text-shadow: 0 0 5px #ED1A3D;
 }
+
 .perk-icons {
     display: flex;
     margin-top: 0.5rem;
@@ -277,9 +280,11 @@ h1 {
     align-items: center;
     font-size: 1.5rem;
 }
+
 .killer-icon:hover {
     transform: scale(1.1);
 }
+
 /* 0, 1, 2 のみ黄色に変更 */
 .killer-icon[data-killer="0"],
 .killer-icon[data-killer="1"],
@@ -287,6 +292,7 @@ h1 {
     color: #ffff00;
     text-shadow: 0 0 5px #ED1A3D;
 }
+
 .perk-icons {
     display: flex;
     margin-top: 0.5rem;
