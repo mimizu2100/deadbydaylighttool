@@ -54,6 +54,26 @@ h1 {
     opacity: 0.6;
     box-shadow: none;
 }
+#mute-button {
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    border: none;
+    background-color: #ccc;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10000;
+    color: #333;
+    box-shadow: 0 0 5px red;
+}
+#mute-button:hover {
+    background-color: #ddd;
+}
+#mute-button:active {
+    background-color: #bbb;
+}
 #killer-info {
     display: flex;
     justify-content: center;
