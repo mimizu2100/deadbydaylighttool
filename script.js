@@ -122,8 +122,8 @@ perkIconsElements.forEach((icon, index) => {
 // ページ読み込み時にAudioオブジェクトを初期化
 window.onload = () => {
     timerStartSound = new Audio('決死の一撃 2025-03-22 194215.mp3'); // ★ MP3ファイルのパスを指定 ★
-    //timerControls.appendChild(muteButton); // ★ muteButtonをtimerControlsに追加 (timerControlsは定義されていません)
-    document.body.appendChild(muteButton); // ★ muteButtonをbodyに追加
+    //timerControls.appendChild(muteButton); // ★ timerControlsは定義されていないため、appendChildできません
+    document.body.appendChild(muteButton); // ★ bodyに追加
     muteButton.style.fontSize = '1.2rem'; // ★ アイコンのサイズを調整
     muteButton.style.cursor = 'pointer'; // ★ カーソルスタイルを設定
     muteButton.style.padding = '0.5rem'; // ★ パディングを追加
