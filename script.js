@@ -57,10 +57,10 @@ function resetTimer() {
 }
 // キラーアイコンクリック処理
 killerIcons.forEach((icon, index) => {
-    icon.addEventListener('click', () => {
-        hookCounts[index] = (hookCounts[index] + 1) % 4;
-        icon.textContent = hookCounts[index] === 3 ? '💀' : hookCounts[index];
-    });
+        icon.addEventListener('click', () => {
+                hookCounts[index] = (hookCounts[index] + 1) % 4;
+                icon.textContent = hookCounts[index] === 3 ? '💀' : hookCounts[index];
+        });
 });
 // パークアイコンクリック処理
 perkIcons.forEach((icon, index) => {
