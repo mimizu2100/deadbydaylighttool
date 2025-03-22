@@ -129,13 +129,13 @@ window.onload = () => {
     muteButton.style.padding = '0.5rem'; // ★ パディングを追加
     muteButton.style.borderRadius = '50%'; // ★ 丸くする
     muteButton.style.border = 'none'; // ★ 枠線をなくす
-    muteButton.style.backgroundColor = 'transparent'; // ★ 背景色を透明にする
+    muteButton.style.backgroundColor = '#ccc'; // ★ 背景色を設定
     muteButton.style.position = 'fixed'; // ★ 位置を固定
     muteButton.style.top = '1rem'; // ★ 上からの位置
     muteButton.style.right = '1rem'; // ★ 右からの位置
     muteButton.style.zIndex = '10'; // ★ 重なり順を最前面に
     muteButton.title = 'ミュート / ミュート解除'; // ★ ツールチップ
-    muteButton.style.color = '#fff'; // ★ 文字色を白に設定
+    muteButton.style.color = '#333'; // ★ 文字色を設定
 };
 // イベントリスナー
 startButton.addEventListener('click', startTimer);
